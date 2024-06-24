@@ -41,28 +41,10 @@ async function fetchGridData() {
     }
 }
 
-// function displayGridData(data) {
-//     const gridContainer = document.getElementById('gridContainer');
-//     gridContainer.innerHTML = ''; // Clear existing grid
-//     data.forEach(grid => {
-//         const gridItem = document.createElement('div');
-//         gridItem.className = 'grid-item';
-//         gridItem.innerHTML = `
-//             <strong>Grid ${grid.gridNumber}</strong><br>
-//             Soil Type: ${grid.soilType}<br>
-//             Soil Status: ${grid.soilStatus}<br>
-//             Crop: ${grid.crop}<br>
-//             Crop Status: ${grid.cropStatus}<br>
-//             Disease: ${grid.disease}<br>
-//             Notes: ${grid.notes}
-//         `;
-//         gridContainer.appendChild(gridItem);
-//     });
-// }
-
 function displayGridData(data) {
     const gridContainer = document.getElementById('gridContainer');
     gridContainer.innerHTML = ''; // Clear existing grid
+
     data
         .filter(grid => grid && grid.gridNumber && grid.soilType && grid.soilStatus && grid.crop && grid.cropStatus && grid.disease)
         .sort((a, b) => a.gridNumber - b.gridNumber)
@@ -80,7 +62,7 @@ function displayGridData(data) {
                 <button onclick="deleteGrid(${grid.gridNumber})">Delete</button>
             `;
             gridContainer.appendChild(gridItem);
-    });
+        });
 }
 
 async function handleFormSubmit(event) {
