@@ -4,8 +4,6 @@ const axios = require('axios');
 const Grid = require('../models/Grid');
 const dotenv = require('dotenv');
 
-dotenv.config();
-
 // Fetch weather data
 router.get('/weather/:zipCode', async (req, res) => {
     const zipCode = req.params.zipCode;
