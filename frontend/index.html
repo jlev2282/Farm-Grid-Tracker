@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Farm Tracking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div id="weather"></div>
+    </header>
+    <main>
+        <form id="dataForm">
+            <label for="gridNumber">Grid Number:</label>
+            <select id="gridNumber" required>
+                <option value="">Select Grid</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="soilType">Soil Type:</label>
+            <select id="soilType" required>
+                <option value="">Select Soil Type</option>
+                <option value="sandy">Sandy</option>
+                <option value="clay">Clay</option>
+                <option value="loamy">Loamy</option>
+            </select>
+
+            <label for="soilStatus">Soil Status:</label>
+            <select id="soilStatus" required>
+                <option value="">Select Soil Status</option>
+                <option value="dry">Dry</option>
+                <option value="moist">Moist</option>
+                <option value="wet">Wet</option>
+            </select>
+
+            <label for="crop">Crop:</label>
+            <select id="crop" required>
+                <option value="">Select Crop</option>
+                <option value="alfalfa">Alfalfa</option>
+                <option value="green peppers">Green Peppers</option>
+                <option value="okra">Okra</option>
+                <option value="sweet potatoes">Sweet Potatoes</option>
+                <option value="tomatoes">Tomatoes</option>
+                <option value="blueberries">Blueberries</option>
+                <option value="okra">Okra</option>
+            </select>
+
+            <label for="cropStatus">Crop Status:</label>
+            <select id="cropStatus" required>
+                <option value="">Select Crop Status</option>
+                <option value="healthy">Healthy</option>
+                <option value="diseased">Diseased</option>
+                <option value="harvested">Harvested</option>
+            </select>
+
+            <label for="disease">Disease:</label>
+            <select id="disease" required>
+                <option value="">Select Disease</option>
+                <option value="none">None</option>
+                <option value="rust">Rust</option>
+                <option value="blight">Blight</option>
+                <option value="mildew">Mildew</option>
+            </select>
+
+            <label for="notes">Notes:</label>
+            <input type="text" id="notes" maxlength="100" placeholder="Notes (up to 100 characters)">
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="gridContainer" class="grid-container"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
